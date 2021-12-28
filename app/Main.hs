@@ -1,8 +1,6 @@
-
-
 module Main where
 
-import qualified PXCrawler (someFunc, main)
+import qualified Crawler
 
 main :: IO ()
-main = PXCrawler.main
+main = Crawler.main
