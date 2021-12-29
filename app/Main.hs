@@ -1,6 +1,7 @@
 module Main where
 
-import qualified Crawler
+import Crawler (crawlArtwork)
+import System.Environment (getArgs)
 
 main :: IO ()
-main = Crawler.main
+main = getArgs >>= mapM_ crawlArtwork

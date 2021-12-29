@@ -1,5 +1,5 @@
 # PX Crawler
 
 ``` bash
-$ px-crawler <id>
+$ px-crawler <id>...
 ```

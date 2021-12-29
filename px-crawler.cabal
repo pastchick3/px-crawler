@@ -11,39 +11,36 @@ extra-source-files:
 library
     exposed-modules:  Crawler
     build-depends:
-        base ^>=4.15.0,
+        base ^>=4.15.0.0,
         http-conduit ^>=2.3.8,
-        bytestring ^>=0.11.1,
-
+        bytestring ^>=0.11.1.0,
         tagsoup ^>=0.14.8,
-        utf8-string ^>=1.0.2,
-
-        aeson ^>=2.0.2,
-        containers ^>=0.6.5,
-        vector ^>=0.12.3,
-        text ^>=1.2.5,
-
-        regex-tdfa ^>=1.3.1,
-
-        directory ^>=1.3.7,
-        scientific ^>=0.3.7,
+        aeson ^>=2.0.2.0,
+        containers ^>=0.6.5.1,
+        text ^>=1.2.5.0,
+        regex-tdfa ^>=1.3.1.1,
+        directory ^>=1.3.7.0,
+        scientific ^>=0.3.7.0
     hs-source-dirs:   src
     default-language: Haskell2010
+    ghc-options:      -Wall -O2
 
 executable px-crawler
     main-is:          Main.hs
     build-depends:
-        base ^>=4.15.0,
+        base ^>=4.15.0.0,
         px-crawler
     hs-source-dirs:   app
     default-language: Haskell2010
-    ghc-options:      -Wall
+    ghc-options:      -Wall -O2
 
-test-suite test-integration
+test-suite test
     type:             exitcode-stdio-1.0
     main-is:          test.hs
-    build-depends:    base ^>=4.15.0,
-                      px-crawler,
+    build-depends:
+        base ^>=4.15.0.0,
+        directory ^>=1.3.7.0,
+        px-crawler,
     hs-source-dirs:   tests
     default-language: Haskell2010
     ghc-options:      -Wall
